@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container>button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.container>button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+    color: #333;
+}
+
+tbody tr:hover {
+    background-color: #f1f7ff;
+}
+
+td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+td button {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin: 3px;
+}
+
+td button:first-child {
+    background-color: #ffc107;
+}
+
+td button:first-child:hover {
+    background-color: green;
+}
+
+td button:last-child {
+    background-color: #dc3545;
+}
+
+td button:last-child:hover {
+    background-color: #c82333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    padding: 40px;
+}
+
+
+
+#form-product {
+    display: none;
+    width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+#form-product div {
+    margin-bottom: 15px;
+}
+
+#form-product label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+#form-product input,
+#form-product select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#form-product input:focus,
+#form-product select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#form-product button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-product button:hover {
+    background-color: #0056b3;
+}
+
+#form-product button[id="cancel"] {
+    border: 0.3px solid red;
+    background-color: white;
+    color: red;
+    margin-top: 15px;
+}
+
+#form-product button[id="cancel"]:hover {
+    background-color: red;
+    color: white;
+}
+
+
+
+/* Css supplier */
+
+#formsupplier {
+    display: none;
+    width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+#formsupplier div {
+    margin-bottom: 15px;
+}
+
+#formsupplier label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+#formsupplier input,
+#formsupplier select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#formsupplier input:focus,
+#formsupplier select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#formsupplier button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#formsupplier button:hover {
+    background-color: #0056b3;
+}
+
+#formsupplier button[id="cancel"] {
+    border: 0.3px solid red;
+    background-color: white;
+    color: red;
+    margin-top: 15px;
+}
+
+#formsupplier button[id="cancel"]:hover {
+    background-color: red;
+    color: white;
+}

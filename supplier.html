@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('style.css');
+    </style>
+</head>
+
+<body id="supplier-page">
+    <div class="container">
+        <h2>Quản lý nhà cung cấp</h2>
+        <button id="btn-sup" type="button2">Thêm nhà cung cấp</button>
+        <form id="formsupplier">
+            <div>
+                <label for="">Tên nhà cung cấp</label>
+                <input type="text" id="name">
+            </div>
+
+            <div>
+                <label for="">Logo</label>
+                <input type="text" id="image">
+            </div>
+
+            <div>
+                <label for="">Email</label>
+                <input type="text" id="email">
+            </div>
+
+            <div>
+                <label for="">Phone</label>
+                <input type="text" id="phone">
+            </div>
+
+            <div>
+                <label for="">Address</label>
+                <input type="text" id="address">
+            </div>
+
+
+            <button id="button2" type="submit">Thêm nhà cung cấp</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên nhà cung cấp</th>
+                    <th>Logo</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="supply.js"></script>
+</body>
+
+</html>
