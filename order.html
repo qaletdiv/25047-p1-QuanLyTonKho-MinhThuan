@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body id="order-page">
+    <div class="container">
+        <h2>Trang mua hàng</h2>
+        <button id="btn-order" type="button3">Tạo mới</button>
+        <form id="formOrder">
+            <div>
+                <label for="">Tên nhà cung cấp</label>
+                <input type="text" id="supplierName">
+            </div>
+
+            <div>
+                <label for="">Ngày mua</label>
+                <input type="text" id="date">
+            </div>
+
+            <div>
+                <label for="">Nhân viên phụ trách</label>
+                <input type="text" id="staff">
+            </div>
+
+            <div>
+                <label for="">Trạng thái</label>
+                <input type="text" id="status">
+            </div>
+            <h6>Thông tin sản phẩm</h6>
+
+            <button id="addPro" type="button">Thêm sản phẩm</button>
+            <div id="listProduct">
+                <div class="product">
+                    <div>
+                        <label for="">Mã sản phẩm</label>
+                        <input type="text" id="idProduct">
+                    </div>
+                    <div>
+                        <label for="">Tên sản phẩm</label>
+                        <input type="text" id="productName">
+                    </div>
+                    <div>
+                        <label for="">Số lượng</label>
+                        <input type="text" id="quanity">
+                    </div>
+                    <div>
+                        <label for="">Đơn giá</label>
+                        <input type="text" id="price">
+                    </div>
+                    <div>
+                        <label for="">Thành tiền</label>
+                        <input type="text" id="totalPrice">
+                    </div>
+                    <button type="button" class="btn-delete-product">xóa</button>
+                </div>
+            </div>
+            <h4>Tổng tiền đơn hàng: </h4>
+            <button id="button2" type="submit">Thêm đơn hàng</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Tên nhà cung cấp</th>
+                    <th>Ngày mua</th>
+                    <th>Nhân viên phụ trách</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyOrder">
+
+            </tbody>
+        </table>
+
+    </div>
+    <script src="Order.js"></script>
+</body>
+
+</html>
