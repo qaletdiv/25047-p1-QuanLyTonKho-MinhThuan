@@ -278,3 +278,20 @@ td button {
         padding: 10px;
     }
 }
+
+#formOrder input,
+#formOrder select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    background-color: white;
+}
+
+#formOrder input:focus,
+#formOrder select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}

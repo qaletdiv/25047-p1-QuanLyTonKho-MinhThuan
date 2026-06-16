@@ -29,6 +29,7 @@ function renderOrders(orders) {
         `
     })
 }
+
 const formOrder = document.querySelector('#formOrder');
 const addBtn = document.getElementById('btn-order');
 
@@ -69,6 +70,7 @@ formOrder.addEventListener('submit', function (event) {
         status,
         products
     };
+    
 
     fetch("http://localhost:3000/orders", {
         method: "POST",
@@ -80,7 +82,37 @@ formOrder.addEventListener('submit', function (event) {
 }
 
 );
+const supplierSelect = document.getElementById('supplierId');
 
+async function getSuppliersForSelect() {
+    try {
+        const response = await fetch('http://localhost:3000/suppliers');
+
+        if (!response.ok) {
+            throw new Error('Lỗi khi lấy danh sách nhà cung cấp');
+        }
+
+        const suppliers = await response.json();
+
+        supplierSelect.innerHTML = `
+            <option value="">-- Chọn nhà cung cấp --</option>
+        `;
+
+        suppliers.forEach(supplier => {
+            supplierSelect.innerHTML += `
+                <option value="${supplier.id}">
+                    ${supplier.name}
+                </option>
+            `;
+        });
+
+    } catch (error) {
+        console.log(error);
+        alert('Không lấy được danh sách nhà cung cấp');
+    }
+}
+
+getSuppliersForSelect();
 
 const addPro = document.querySelector('#addPro')
 const listPro = document.querySelector('#listProduct')
