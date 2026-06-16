@@ -61,7 +61,7 @@ formOrder.addEventListener('submit', function (event) {
             "totalPrice": item.querySelector('#quanity').value * item.querySelector('#price').value
         })
     })
-    const orderTotal = products.reduce((total,product) => total + product.totalPrice, 0)
+    const orderTotal = products.reduce((total, product) => total + product.totalPrice, 0)
     const newOrder = {
         supplierName,
         purchaseDate,
@@ -70,7 +70,7 @@ formOrder.addEventListener('submit', function (event) {
         status,
         products
     };
-    
+
 
     fetch("http://localhost:3000/orders", {
         method: "POST",
@@ -114,36 +114,74 @@ async function getSuppliersForSelect() {
 
 getSuppliersForSelect();
 
-const addPro = document.querySelector('#addPro')
-const listPro = document.querySelector('#listProduct')
-if (addPro) {
-    addPro.addEventListener('click', function (event) {
-        event.preventDefault();
-        listPro.innerHTML += `
-                 <div class="product">
-                    <div>
-                        <label for="">Mã sản phẩm</label>
-                        <input type="text" id="idProduct">
-                    </div>
-                    <div>
-                        <label for="">Tên sản phẩm</label>
-                        <input type="text" id="productName">
-                    </div>
-                    <div>
-                        <label for="">Số lượng</label>
-                        <input type="text" id="quanity">
-                    </div>
-                    <div>
-                        <label for="">Đơn giá</label>
-                        <input type="text" id="price">
-                    </div>
-                    <div>
-                        <label for="">Thành tiền</label>
-                        <input type="text" id="totalPrice">
-                    </div>
-                    <button type="button" class="btn-delete-product">xóa</button>
-                </div>`
-    })
+const addPro = document.getElementById('addPro');
+const listProduct = document.getElementById('listProduct');
+
+addPro.addEventListener('click', function () {
+    listProduct.insertAdjacentHTML('beforeend', `
+        <div class="product">
+            <div>
+                <label>Mã sản phẩm</label>
+                <input type="text" class="idProduct">
+            </div>
+
+            <div>
+                <label>Tên sản phẩm</label>
+                <input type="text" class="productName">
+            </div>
+
+            <div>
+                <label>Số lượng</label>
+                <input type="text" class="quantity">
+            </div>
+
+            <div>
+                <label>Đơn giá</label>
+                <input type="text" class="price">
+            </div>
+
+            <div>
+                <label>Thành tiền</label>
+                <input type="text" class="totalPrice">
+            </div>
+
+            <button type="button" class="btn-delete-product">Xóa</button>
+        </div>
+    `);
+});
+
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('btn-delete-product')) {
+        e.target.closest('.product').remove();
+        updateOrderTotal();
+    }
+});
+
+document.addEventListener('input', function (e) {
+    if (
+        e.target.classList.contains('quantity') ||
+        e.target.classList.contains('price')
+    ) {
+        const productRow = e.target.closest('.product');
+
+        const quantity = Number(productRow.querySelector('.quantity').value);
+        const price = Number(productRow.querySelector('.price').value);
+
+        const totalPriceInput = productRow.querySelector('.totalPrice');
+
+        totalPriceInput.value = quantity * price;
+
+        updateOrderTotal();
+    }
+});
+
+function updateOrderTotal() {
+    const totalPriceInputs = document.querySelectorAll('.totalPrice');
+    let total = 0;
+
+    totalPriceInputs.forEach(input => {
+        total += Number(input.value);
+    });
+
+    document.getElementById('orderTotal').textContent = total;
 }
-
-

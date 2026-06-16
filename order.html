@@ -40,29 +40,34 @@
             <div id="listProduct">
                 <div class="product">
                     <div>
-                        <label for="">Mã sản phẩm</label>
-                        <input type="text" id="idProduct">
+                        <label>Mã sản phẩm</label>
+                        <input type="text" class="idProduct">
                     </div>
+
                     <div>
-                        <label for="">Tên sản phẩm</label>
-                        <input type="text" id="productName">
+                        <label>Tên sản phẩm</label>
+                        <input type="text" class="productName">
                     </div>
+
                     <div>
-                        <label for="">Số lượng</label>
-                        <input type="text" id="quanity">
+                        <label>Số lượng</label>
+                        <input type="text" class="quantity">
                     </div>
+
                     <div>
-                        <label for="">Đơn giá</label>
-                        <input type="text" id="price">
+                        <label>Đơn giá</label>
+                        <input type="text" class="price">
                     </div>
+
                     <div>
-                        <label for="">Thành tiền</label>
-                        <input type="text" id="totalPrice">
+                        <label>Thành tiền</label>
+                        <input type="text" class="totalPrice">
                     </div>
-                    <button type="button" class="btn-delete-product">xóa</button>
+
+                    <button type="button" class="btn-delete-product">Xóa</button>
                 </div>
             </div>
-            <h4>Tổng tiền đơn hàng: </h4>
+            <h4>Tổng tiền đơn hàng: <span id="orderTotal">0</span></h4>
             <button id="button2" type="submit">Thêm đơn hàng</button>
         </form>
         <table>
