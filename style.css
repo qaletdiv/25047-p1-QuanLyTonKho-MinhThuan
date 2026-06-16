@@ -253,3 +253,130 @@ body {
     background-color: red;
     color: white;
 }
+
+
+
+/* --------order------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#order-page {
+    background-color: #f4f6f8;
+    padding: 30px;
+}
+
+.container_order {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container_order h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Button thêm */
+#btn-order {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#btn-order:hover {
+    background-color: #218838;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #eef5ff;
+}
+
+/* Button trong bảng nếu sau này có sửa / xóa */
+td button {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin: 2px;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    #order-page {
+        padding: 15px;
+    }
+
+    .container_order {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 800px;
+    }
+
+    th,
+    td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    #btn-order {
+        width: 100%;
+    }
+}
