@@ -45,7 +45,7 @@ if (addBtn && formOrder) {
 formOrder.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const supplierName = document.getElementById('supplierName').value;
+    const supplierName = document.getElementById('supplierId').value;
     const purchaseDate = document.getElementById('date').value;
     const staffInCharge = document.getElementById('staff').value;
     const status = document.getElementById('status').value;
@@ -54,11 +54,11 @@ formOrder.addEventListener('submit', function (event) {
     const items = document.querySelectorAll('.product')
     items.forEach(item => {
         products.push({
-            "productId": item.querySelector('#idProduct').value,
-            "productName": item.querySelector('#productName').value,
-            "quantity": item.querySelector('#quanity').value,
-            "unitPrice": item.querySelector('#price').value,
-            "totalPrice": item.querySelector('#quanity').value * item.querySelector('#price').value
+            "productId": item.querySelector('.idProduct').value,
+            "productName": item.querySelector('.productName').value,
+            "quantity": item.querySelector('.quantity').value,
+            "unitPrice": item.querySelector('.price').value,
+            "totalPrice": item.querySelector('.quantity').value * item.querySelector('.price').value
         })
     })
     const orderTotal = products.reduce((total, product) => total + product.totalPrice, 0)
